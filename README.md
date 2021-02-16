@@ -1,3 +1,11 @@
+## Complete Jenkins Pipeline Tutorial Jenkinsfile explained
+
+https://gitlab.com/nanuchi/techworld-js-docker-demo-app/-/blob/dev/Jenkinsfile
+https://gitlab.com/nanuchi/techworld-js-docker-demo-app/-/blob/dev/script.groovy
+
+
+## Jenkinsfile1 is for _Configure Build Tools in Jenkins and Jenkinsfile_
+
 Gradle with a wrapper does not work, it seems Gradle is not installed at all.
 
 The log complains ./gradlew not found.
