@@ -4,7 +4,7 @@ pipeline{
   stages{
     stage("run frontend") {
       echo 'executing yarn...'
-      nodejs("Node1580") {
+      nodejs("Node1017") {
         sh 'yarn install'
       }
     }
