@@ -8,8 +8,14 @@ pipeline{
     VERSION = '1.3.0' 
     SERVER_CREDENTIALS = credentials('server-credentials')
   }
-  
-  
+
+  parameters {
+    
+    choice(name: 'Version', choices['1.1.0','1.2.0','1.3.0'], description: 'Please choose the version')
+    booleanParam(name: 'executeTests', defaultValue: true, description: '')
+    
+  }
+ 
   stages {
   
     stage("build") {
@@ -23,7 +29,7 @@ pipeline{
       
       steps {
          echo "building application..."
-         echo "building version ${VERSION}"
+       //  echo "building version ${VERSION}"
       }
     }
   
@@ -31,7 +37,8 @@ pipeline{
       
       when {
         expression{
-            BRANCH_NAME == 'dev'
+          //  BRANCH_NAME == 'dev'
+          params.executeTests == true
         }
       }
       
@@ -42,8 +49,9 @@ pipeline{
   
    stage("deploy") {
       steps {
-         echo "deploying application..."
-         echo "deploying with ${SERVER_CREDENTIALS}"
+        echo "deploying application..."
+        echo "deploying with ${SERVER_CREDENTIALS}"
+        echo "deploying version ${params.Version}"
       }
     }
 
