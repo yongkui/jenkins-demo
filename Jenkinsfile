@@ -6,6 +6,7 @@ pipeline{
   
   environment {
     VERSION = '1.3.0' 
+    SERVER_CREDENTIALS = credentials('server-credentials')
   }
   
   
@@ -22,7 +23,7 @@ pipeline{
       
       steps {
          echo "building application..."
-        echo "building version ${VERSION}"
+         echo "building version ${VERSION}"
       }
     }
   
@@ -42,6 +43,7 @@ pipeline{
    stage("deploy") {
       steps {
          echo "deploying application..."
+         echo "deploying with ${SERVER_CREDENTIALS}"
       }
     }
 
