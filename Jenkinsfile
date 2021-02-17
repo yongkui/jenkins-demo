@@ -1,8 +1,13 @@
-# CODE_CHANGES = getGitChanges()  // this does not work with error message: java.lang.NoSuchMethodError: No such DSL method 'getGitChanges' found among steps
+// CODE_CHANGES = getGitChanges()  // this does not work with error message: java.lang.NoSuchMethodError: No such DSL method 'getGitChanges' found among steps
 
 pipeline{
   
   agent any
+  
+  environment {
+    VERSION = '1.3.0' 
+  }
+  
   
   stages {
   
@@ -17,7 +22,7 @@ pipeline{
       
       steps {
          echo "building application..."
-         echo "application built."
+        echo "building version ${VERSION}"
       }
     }
   
