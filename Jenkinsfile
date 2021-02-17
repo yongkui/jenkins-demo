@@ -1,4 +1,4 @@
-CODE_CHANGES = getGitChanges()
+# CODE_CHANGES = getGitChanges()  # this does not work with error message: java.lang.NoSuchMethodError: No such DSL method 'getGitChanges' found among steps
 
 pipeline{
   
@@ -10,7 +10,8 @@ pipeline{
       
       when {
         expression{
-            BRANCH_NAME == 'file' && CODE_CHANGES == ‘true’
+            # BRANCH_NAME == 'file' && CODE_CHANGES == ‘true’
+            BRANCH_NAME == 'file'
         }
       }
       
