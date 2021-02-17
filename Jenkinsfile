@@ -6,7 +6,7 @@ pipeline{
     stage("front-end") {
       steps {
          echo "executing yarn..."
-        nodejs(Node-10.17){
+        nodejs("Node-10.17"){
             sh 'yarn install'
         }
       }
