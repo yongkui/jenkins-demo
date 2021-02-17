@@ -23,5 +23,20 @@ pipeline{
     }
 
   }
+  
+  post {
+    always{
+      echo "here is something that will always be done."
+    }
+    
+    success{
+      echo "here is something that will be done when build is successful."
+    }
+    
+    failure{
+      echo "here is something that will be done when build is failed."
+    }
+    
+  }
 
 }
