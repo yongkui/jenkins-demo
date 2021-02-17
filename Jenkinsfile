@@ -20,7 +20,7 @@ pipeline{
   
    stage("back-end") {
       steps {
-         echo "deploying application...'
+         echo "deploying application..."
          sh './gradlew -v'
       }
     }
