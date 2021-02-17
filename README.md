@@ -1,9 +1,11 @@
 ## Complete Jenkins Pipeline Tutorial Jenkinsfile explained
 
 Youtube Playlist:
+
 https://www.youtube.com/watch?v=7KCS70sCoK0&list=PLy7NrYWoggjw_LIiDK1LXdNN82uYuuuiC&index=6
 
 Sample files:
+
 https://gitlab.com/nanuchi/techworld-js-docker-demo-app/-/blob/dev/Jenkinsfile
 
 https://gitlab.com/nanuchi/techworld-js-docker-demo-app/-/blob/dev/script.groovy
