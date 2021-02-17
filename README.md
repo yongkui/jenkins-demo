@@ -11,6 +11,12 @@ https://gitlab.com/nanuchi/techworld-js-docker-demo-app/-/blob/dev/Jenkinsfile
 https://gitlab.com/nanuchi/techworld-js-docker-demo-app/-/blob/dev/script.groovy
 
 
+## Notes
+
+1. When configure source, use https:// url instead of git!!!
+for example: 
+Project Repository: https://github.com/yongkui/jenkins-demo.git
+
 ## Jenkinsfile1 is for _Configure Build Tools in Jenkins and Jenkinsfile_
 
 Gradle with a wrapper does not work, it seems Gradle is not installed at all.
